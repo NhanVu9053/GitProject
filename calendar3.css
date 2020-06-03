@@ -1,0 +1,10 @@
+.thang10 {color: blue;text-align: center;}
+.bang {width: 100%;overflow-x: auto;}
+.mau1{color: white;background: yellow;font-weight: bold;border:1px solid black;}
+.mau2{color: white;background: blue;border:1px solid black;}
+.bang{border-collapse: collapse;border:1px solid black;}
+.bang th{border:1px solid black;}
+.bang tr{border:1px solid black;}
+.bang td{border:1px solid black;text-align: center;}
+.maudo{color: red;}
+.mauxanh{color: blue;}
