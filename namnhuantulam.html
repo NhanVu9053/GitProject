@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // ASDSDDA
+        function abc(nam) {
+            if (nam % 100 == 0) {
+                if (nam % 400 == 0) {
+                    return "la nam nhuan";
+                } else {
+                    return " ko phai nam nhuan";
+                }
+            }
+            else if (nam % 4 == 0) {
+                return ' la nam nhuan';
+
+            }
+            return ' la nam nhuan';
+        }
+
+
+        function main() {
+            let nam = prompt('xin nhap so nam');
+            document.getElementById('nhan').innerHTML = abc(nam);
+
+        }
+
+
+
+    </script>
+    <input type="button" onclick="main()" value="XXX"> </input>
+    <div id="nhan">
+        Chua biet nam nao
+
+    </div>
+
+</body>
+
+</html>

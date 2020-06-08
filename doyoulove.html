@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p style="color:red;font-size:75px;font-family:cursive" >Do You Love Me </p>
+        <input type="button" value="yes" onclick="yes()">
+        <input id='no' style="text-align: center; position: relative;" type="button" value="no" onmouseover="bigImg()">
+    </div>
+    <script>
+        function yes() {
+            alert('Lov u tooo' );
+        }
+
+        function bigImg() {
+            let nut = document.getElementById('no')
+            const left = Math.floor(Math.random() * 500) + 'px'
+            const top = Math.floor(Math.random() * 500) + 'px'
+            nut.style.left = left
+            nut.style.top = top
+        }
+
+
+    </script>
+</body>
+
+</html>

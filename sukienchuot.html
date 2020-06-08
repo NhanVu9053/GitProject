@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form>
         <img id="myImage" src="https://giupban.com.vn/wp-content/uploads/2019/09/stt-hay-ve-mua.jpg" />
         <p>Click button below to move the image to right</p>
-        <input type="button" value="Click Me" />
+
+        <input type="button" value="sang phai" onclick="moveRight();" />
+        <input type="button" value="xuong duoi" onclick="moveDown();" />
+
+
         <script>
-            let imgmua = null,
-            imgmua = document.getElementById('myImage');
+           
             function init() {
-    imgmua = document.getElementById('myImage');
-    imgmua.style.position = 'relative';
-    imgmua.style.left = '0px';}
-    function moveRight() {
-    imgmua.style.left = parseInt(imgObj.style.left) + 10 + 'px';
-}
-function moveRight() {
-    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
-}
-window.onload = init;
+                anh = document.getElementById('myImage');
+                anh.style.position = 'relative';
+                anh.style.left = '0px';
+                anh.style.top = '0px';
+            }
+            function moveRight() {
+                anh.style.left = parseInt(anh.style.left) + 20 + 'px';
+            }
+            function moveDown() {
+                anh.style.top = parseInt(anh.style.top) + 20 + 'px';
+            }
+            window.onload = init;
+            function main(){
+                let anh = null;
+            anh = document.getElementById('myImage');
+            }
+
+
+
+
+
+            // function init() {
+
+            //     x.style.height = "120px";
+            //     x.style.width = "120px";
+            // }
+
+            // function normalImg(x) {
+            //     x.style.height = "32px";
+            //     x.style.width = "32px";
+            // }
 
 
         </script>
-        <input type="button" value="Click Me" onclick="moveRight();" />
+
     </form>
 </body>
+
 </html>
