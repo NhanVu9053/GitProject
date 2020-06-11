@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Eng = ['Chicken', 'Dolphin', 'Lion', 'Tiger', 'Cat'];
+        let Vie = ['Ga', 'Ca Heo', 'Su tu', 'Ho', 'Meo'];
+        let a = prompt('xin nhap tu muon tra', "");
+        for (var i = 0; i < Eng.length; i++) {
+            if (a == Eng[i]) {
+                document.write(`${Vie[i]}`);
+             break;
+            }
+            if(i==Eng.length-1){
+                document.write('not found');
+            }
+                
+            }
+        
+    </script>
+
+</body>
+
+</html>
