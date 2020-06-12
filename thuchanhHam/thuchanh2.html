@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Doi Do C ra do F</h1>
+    <h2>
+        Fahrenheit:<input type="number" id="Cel" oninput="doinhietdo(this.value)" onchange="doinhietdo(this.value)">
+
+    </h2>
+    <p>Celius: <span id='output'></span> </p>
+    <script>
+        function doinhietdo(C) {
+            C = parseFloat(C);
+            document.getElementById('output').innerHTML = (C - 32) / 1.8;
+
+
+        }
+    </script>
+</body>
+
+</html>
