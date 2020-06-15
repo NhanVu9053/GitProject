@@ -12,7 +12,7 @@
     <p id="caro"></p>
     <input type="button" value="Change Value" onclick="changeValue()">
     <script>
-        let b = document.getElementById("carogame ");
+        let b = document.getElementById("caro");
 
         let board = [];
         let data = "";
@@ -27,7 +27,7 @@
             }
         }
 
-        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+        
         b.innerHTML = data;
         function changeValue() {
             let positionX = prompt("X: ");
@@ -40,7 +40,7 @@
                     data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
                 }
             }
-            data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+            // data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
             b.innerHTML = "<hr/>" + data;
         }
 

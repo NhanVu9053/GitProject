@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>
+        <table>
+            <tr>
+                <td>
+                    amount
+
+                </td>
+                <td>From currency</td>
+                <td>
+                    To currency
+                </td>
+            <tr>
+                <td>
+                    <input type="text" name="amout" id="amout">
+                </td>
+                <td>
+                    <select id="FrCur" name="FrCur">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                        <option value="EuR">EuR</option>
+                    </select>
+
+
+                </td>
+                <td>
+                    <select name="ToCur" id="ToCur">
+                        <option value="USD">USD</option>
+                        <option value="VND">VND</option>
+                        <option value="EuR">EuR</option>
+                    </select>
+                </td>
+<td>
+   <button onclick='doitien()'>covert</button>
+</td>
+
+            </tr>
+
+
+            </tr>
+        </table>
+
+    </h1>
+
+    <script>
+        function doitien() {
+            let fr = document.getElementById('FrCur').value;
+            let To= document.getElementById('ToCur').value;
+            let amo= +document.getElementById('amout').value;
+            if(fr=='VND'){amo=amo/23000}
+            else{amo=amo*23000};
+
+            alert(amo);
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
