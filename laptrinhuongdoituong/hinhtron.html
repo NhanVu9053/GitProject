@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Hinhtron = function (radius, mausac) {
+            this.radius = radius;
+            this.color = mausac;
+            this.getArea = function () {
+                return Math.PI * radius * radius;
+
+            }
+
+
+            this.getradius = function radius() {
+                return radius;
+
+            };
+            this.getcolor = function color() {
+                return color;
+            };
+            this.setradius = function (bk) {
+                this.radius = bk;
+            }
+            this.setcolor = function (ms) {
+                 this.color=ms;
+            }
+        };
+        let radius = new Hinhtron(2, 'Pink');
+        document.write(radius.getArea() + radius.color + radius.radius);
+radius.setradius(222);
+document.write(radius.getArea() + radius.color + radius.radius);
+
+
+    </script>
+</body>
+
+</html>
