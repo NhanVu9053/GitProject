@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function Temperature() {
+            this.doC = 0;
+            this.setdoC = function (doC) {
+                if (doC >= -23) {
+                    this.doC = doC
+                }
+            }
+//temperature is instance of Temperature
+            this.chuyensangF = function () {
+                let doF = this.doC * 1.8 + 32;
+                return doF;
+            }
+            this.CsangK = function () {
+                return this.doC + 273;
+            }
+        }
+
+        let temperature = new Temperature();
+        temperature.setdoC(25)
+        document.write(temperature.chuyensangF())
+        document.write(temperature.CsangK())
+    </script> -->
+    <script>
+        class Temperature {
+            doC;
+            constructor(doC) {
+                this.doC = doC
+                // this.doF = doF
+            }
+            doiCsangF() {
+                return this.doC * 1.8 + 32
+            }
+            doiCsangK() {
+                return this.doC + 273
+            }
+        }
+        let temperature= new Temperature(30)
+        document.write(temperature.doiCsangF())
+
+    </script>
+</body>
+
+</html>
