@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Battery {
+            Enegry;
+            constructor(Enegry) {
+                this.Enegry = Enegry;
+            }
+            setEngry(Enegry) {
+                this.Enegry = Enegry;
+            };
+            getEnegry() {
+                return this.Enegry;
+            }
+
+            pinGiam() {
+                if (this.Enegry > 0) {
+                    this.Enegry--;
+                }
+            }
+
+        }
+        class Slamp {
+            status;
+            battery;
+            constructor(status,battery){
+                this.status = status;
+                this.battery = battery;
+            }
+            setBattery(battery) {
+                this.battery = battery;
+            }
+            thongTinPin9() {
+                return this.battery;
+            }
+            light() {
+                if (this.status) { alert('lightning') }
+                else { alert('not lighting') }
+            };
+            batTat(status) {
+                this.status = status;
+                this.battery.pinGiam();
+                return this.status;
+                
+            }
+            
+        }
+        var battery = new Battery(10);
+     
+
+        var slamp= new Slamp(false,battery);
+        slamp.setBattery(battery);
+
+        document.write(slamp.thongTinPin9().Enegry  + '</br>');
+        slamp.light();
+
+        document.write(slamp.batTat(true));
+        // lamp.light;
+        slamp.light();
+        // lamp.bat;
+
+        document.write(slamp.batTat(false));
+        slamp.light();
+        document.write(battery.Enegry)
+
+        // lamp.tat;
+        // lamp.tat;
+
+
+
+    </script>
+</body>
+
+</html>
