@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            status; pin; nhap; inbox; sent;
+            constructor(pin) {
+                this.status = false;
+                this.pin = pin;
+                this.nhap = "";
+                this.inbox = [];
+                this.sent = [];
+            }
+            isOn() { return status };
+            togbetMode() {
+                this.status = !this.status
+            }
+            charge() { if (this.pin < 100) { this.pin++ } }
+
+            getMsgInBox(index) { return this.inbox[index] }
+
+            getMsgSent(index) { return this.sent[index] }
+
+            receive(msg) { this.inbox.unshift(msg) }
+            send(mobi) {
+                mobi.receive(this.nhap);
+                this.sent.unshift(this.nhap)
+                this.giampin()
+
+            }
+            giampin() { if (this.pin > 0) { this.pin-- } }
+
+            text(content) {
+                if (this.isOn()) { return }
+                this.nhap = content;
+                this.giampin()
+            }
+
+
+        }
+
+
+        let mobi1 = new Mobile(50);
+        let mobi2 = new Mobile(50);
+
+        mobi1.togbetMode() //bat Mobi1
+        mobi2.togbetMode() // bat mobi2
+
+        mobi1.text('hello');
+        mobi1.send(mobi2);
+
+        //kt inbox mobi2
+        console.log(mobi2.inbox)
+        //kt sent mobi 1
+        console.log(mobi1.sent)
+    </script>
+</body>
+
+</html>
