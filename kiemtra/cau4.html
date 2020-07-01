@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu diễn hình tròn</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300px" height="200px" style="border:1px solid #D3D3D3;"></canvas>
+    <script>
+        class Cricle {
+            x;
+            y;
+            radius;
+            color;
+            constructor(x, y, radius, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+            }
+            renderCricle(canvas) {
+                var ctx = canvas.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.stroke();
+            }
+        }
+        var circle = new Cricle(40, 50, 30, '#FF3300');
+        var canvas = document.getElementById("myCanvas");
+        circle.renderCricle(canvas);
+    </script>
+</body>
+</html>

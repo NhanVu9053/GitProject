@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> quan ly san pham </h1>
+    <h2> add new product </h2>
+    <div>
+        <input type="text">
+        <button onclick='addProduct(inputText.value)'>add</button>
+    </div>
+    <h2>diss play all product</h2>
+    <h4>product name</h4>
+    <table id="product container">
+        <tr>
+            <td>
+                ten san pham
+            </td>
+            <td>
+                <button>edit</button>
+            </td>
+            <td>
+                <button>delete</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    var ProductList=[
+        'sony',
+        'Samsung',
+        'nokia',
+    ];
+    // them san pham vao danh sach
+    function addProduct(productName){
+        ProductList.push(productName)
+    
+    displayProduct();}
+    // san pham trong danh sach
+    function editProduct(newName,index){
+        ProductList[index]=newName;
+        displayProduct();
+    }
+    // xoa san pham khoi danh sach
+    function deleteProduct(index){
+        ProductList.splice(index,1);
+        displayProduct();
+    }
+    //ham ve lai
+    //duyet qua tung phan tu cua danh sach san pham
+    // noi noi dung can hien thi doi voi moi phan tu lai vs nhau
+    // ve ra(gan noi dung tai innerHtml) tai the table co id la prodcut container
+    function displayProduct(){
+        let content="";
+        for(let i=0;i<=ProductList.length;i++){
+            content+=
+           ` <tr>
+                <td>
+                ${ProductList[i]}
+            </td>
+            <td>
+                <button>edit</button>
+            </td>
+            <td>
+                <button onclick='deleteProduc${i}'>delete</button>
+            </td>`;
+        }
+        document.getElementById('product container').innerHTML=content;
+    }
+    //chuong trinh
+    displayProduct();
+</script>
+</html>

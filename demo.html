@@ -6,18 +6,46 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
     <script>
-        var bang;
-        bang='<table>';
-        bang=bang+'<tr><th>stt</th><th>macode</th></tr>';
-        for(let i=1;i<100;i++){
-            bang+=`<tr>
-            <td> ${i<10?'0'+i:i}
-            <td> C${i<10?'0'+i:i}
-            <tr>`
-        }
-        bang+='</table>'
-        document.write(bang);
-    </script>
+//  function iPrime(num){
+//      var a = false;
+//      if(num<2){a= false}
+//      else if(num==2){a=true}
+//      else if(num>2){
+//          for(let i=3;i< num-1;i++){
+//              if(num%i==0){
+//                  a= false;break
+//              }
+//              return a=true;
+//          }
+//      }
+//      if(a=true){document.write('la so nguyen to')}
+//  else{document.write( 'ko phai la so nguyen to')}
+
+//      }
+//      let b =+prompt('');
+//      document.write(iPrime(b));
+
+//xoa 1 so trong bien
+// function deleteArr(arr,index){
+//     for(let i=index;i< arr.length-1;i++){
+//         arr[i]=arr[i+1]
+//     };
+// arr.pop();
+    
+// }
+// function getNewArray(arr,index){
+//     let newArray= arr;
+//     deleteArr(newArray,index);
+// return newArray
+    
+// }
+// let a = [1,2,3,4,5,6,7];
+// document.write(getNewArray(a,4));
+
+
+
+//     </script>
 </body>
 </html>
