@@ -35,18 +35,19 @@ body{
 
 .footer{
     width: 100%;
-    height:100px;
-    background:#685E3E;
     
+    background:#685E3E;
     clear: left;
     position: relative;
-    line-height: 100px;
+    line-height: 50px;
 }
 .footer .lienhe a{
-    margin-left: 300px;
-    font-size: 30px;
+    margin-left: 200px;
+    font-size: 20px;
     color: blue;
     text-align: center;
+    line-height: 50px;
+    
     
 }
 /* .footer .footer-bottom{
